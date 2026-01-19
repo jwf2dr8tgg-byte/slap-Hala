@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ادي هاله على وشها - Mini Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nickname Modal -->
+    <div id="nicknameModal" class="modal">
+        <div class="modal-content">
+            <input type="text" id="nicknameInput" placeholder="Add your name..." maxlength="20">
+            <button id="startGameBtn">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div class="container" style="display: none;" id="mainGame">
+        <!-- Header -->
+        <header class="header">
+            <h1>ادي هاله على وشها</h1>
+            <div class="score-info">
+                <div class="score">Score: <span id="score">0</span></div>
+            </div>
+        </header>
+
+        <!-- Game Frame -->
+        <div class="game-frame" id="gameFrame">
+            <!-- Character Image -->
+            <img id="character" src="assets/before.png" alt="Character" class="character">
+            
+            <!-- Floating Text (for +10 points) -->
+            <div class="floating-text" id="floatingText">+10</div>
+            
+            <!-- Slippers Container -->
+            <div id="slippersContainer" class="slippers-container"></div>
+        </div>
+
+        <!-- Game Status -->
+        <div class="game-status" id="gameStatus"></div>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button id="newRoundBtn" class="btn-primary">New Round</button>
+            <button id="viewLeaderboardBtn" class="btn-secondary">Leaderboard</button>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal">
+        <div class="modal-content leaderboard-modal">
+            <h2>اكتر واحد ادى هاله على وشها</h2>
+            <div id="leaderboardList" class="leaderboard-list">
+                <p>No scores yet. Play to get on the board!</p>
+            </div>
+            <button id="closeLeaderboardBtn" class="btn-primary">Close</button>
+        </div>
+    </div>
+
+    <!-- Round Over Modal -->
+    <div id="roundOverModal" class="modal">
+        <div class="modal-content">
+            <h2>Round Over!</h2>
+            <p id="roundOverScore">Your Score: 0</p>
+            <p id="roundOverRank"></p>
+            <button id="playAgainBtn" class="btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
